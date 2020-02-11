@@ -37,14 +37,25 @@ document.querySelectorAll('.text-content h2').forEach(el => {
 // Load
 const funBusBody = document.querySelector('body');
 window.addEventListener('load', (event) => {
+  // Makes the screen go blank //
   funBusBody.style.display = 'none';
+
+  // Create the new element & text we want to display //
+  let loadingMessage = document.createElement('h1');
+  let htmlText = document.querySelector('html');
+  loadingMessage.innerText = 'Page is loading..';
+  htmlText.prepend(loadingMessage);
+
+  // console.log(loadingMessage)
 
   setTimeout(() => {
     funBusBody.style.display = '';
-  },2000);
+    loadingMessage.style.display = 'none';
+  },1000);
 });
 
 // Focus
+
 // Resize
 // Scroll
 // Select
