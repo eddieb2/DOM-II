@@ -7,29 +7,43 @@ funBus.addEventListener('mouseover', () => {
 });
 
 // Keydown
-const funBusBody = document.querySelector('body');
 const funBusWelcome = document.querySelector('.intro h2')
 document.addEventListener('keydown', () => {
   funBusWelcome.style.color = 'blue';
   funBusWelcome.style.fontWeight = 'bold';
-  funBusWelcome.style.transform = 'rotate(180deg)'
-  funBusWelcome.style.transition = 'transform 2s'
-  funBusWelcome.style.transition = '2s'
+  funBusWelcome.style.transform = 'rotate(180deg)';
+  funBusWelcome.style.transition = 'transform 2s';
+  funBusWelcome.style.transition = '2s';
 });
 document.addEventListener('keyup', () => {
   funBusWelcome.style.color = 'red';
   funBusWelcome.style.fontWeight = 'bold';
   funBusWelcome.style.transform = 'rotate(360deg)';
-  funBusWelcome.style.transition = '2s'
+  funBusWelcome.style.transition = '2s';
 });
 
-// document.addEventListener('keydown', () => {
-//   funBus.style.transition = 'margin-right 4s';
-// });
-
 // Wheel
+document.querySelectorAll('.text-content h2').forEach(el => {
+  el.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    el.style.color = 'red';
+    el.style.textAlign = 'center';
+    el.style.transform = 'scale(1.5)';
+  })
+})
+
 // Drag / drop
+
 // Load
+const funBusBody = document.querySelector('body');
+window.addEventListener('load', (event) => {
+  funBusBody.style.display = 'none';
+
+  setTimeout(() => {
+    funBusBody.style.display = '';
+  },2000);
+});
+
 // Focus
 // Resize
 // Scroll
