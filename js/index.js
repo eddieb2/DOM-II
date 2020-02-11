@@ -43,7 +43,7 @@ window.addEventListener('load', (event) => {
   // Create the new element & text we want to display //
   let loadingMessage = document.createElement('h1');
   let htmlText = document.querySelector('html');
-  loadingMessage.innerText = 'Page is loading..';
+  loadingMessage.innerText = 'Page is loading...';
   htmlText.prepend(loadingMessage);
 
   // console.log(loadingMessage)
@@ -51,12 +51,37 @@ window.addEventListener('load', (event) => {
   setTimeout(() => {
     funBusBody.style.display = '';
     loadingMessage.style.display = 'none';
-  },1000);
+  },0);
 });
 
 // Focus
+document.querySelectorAll('.nav-link').forEach(el => {
+  el.addEventListener('focus', () => {
+    el.style.color = 'red';
+    el.style.fontWeight = 'bold';
+    el.style.fontSize = '1.9rem';
+    setTimeout(() => {
+      el.style.fontWeight = 'normal';
+      el.style.fontSize = '1.6rem';
+      el.style.color = 'black';
+    },2000);
+  });
+});
+
+        // This was used to test a single link //
+// const navLinks = document.querySelectorAll('.nav-link');
+// navLinks.addEventListener('focus', () => {
+//   navLinks.style.fontWeight = 'bold';
+//   navLinks.style.fontSize = '1.9rem';
+
+//   setTimeout(() => {
+//     navLinks.style.fontWeight = 'normal';
+//     navLinks.style.fontSize = '1.6rem';
+//   },2000);
+// });
 
 // Resize
+
 // Scroll
 // Select
 // Dblclick
