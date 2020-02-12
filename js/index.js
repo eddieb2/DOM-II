@@ -127,6 +127,22 @@ leftMiddleImg.addEventListener('dblclick', () => {
   leftMiddleImg.src = 'https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80'
 });
 
+// Stop Propagation
+const containerOuter = document.querySelectorAll('.content-section').forEach((el) => {
+  el.addEventListener('click', (event) => {
+    el.style.background = 'purple';
+  });
+});
+
+const containerInner = document.querySelectorAll('.text-content').forEach((el) => {
+  el.addEventListener('click', (event) => {
+    event.stopPropagation();
+    el.style.background = 'red';
+  });
+});
+
+
+
 // Stop nav links from refreshing the page 
 const navLinks = document.querySelectorAll('.nav-link').forEach((el) => {
   el.addEventListener('click', (event) => {
