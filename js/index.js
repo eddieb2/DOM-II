@@ -126,3 +126,10 @@ const leftMiddleImg = document.querySelector('.img-fluid');
 leftMiddleImg.addEventListener('dblclick', () => {
   leftMiddleImg.src = 'https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80'
 });
+
+// Stop nav links from refreshing the page 
+const navLinks = document.querySelectorAll('.nav-link').forEach((el) => {
+  el.addEventListener('click', (event) => {
+    event.preventDefault();
+  });
+});
