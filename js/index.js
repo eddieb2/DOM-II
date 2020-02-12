@@ -94,16 +94,26 @@ window.addEventListener('resize', () => {
 // Scroll
 // QUESTION //
 //******* Need some explaination on total scroll calculation *****//
-// window.addEventListener('scroll', () => {
-//   const scrolled = window.scrollY; 
-//   const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY; 
+  const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-//   if(scrolled === totalScroll){
-//     window.alert('Thanks for checking out my work!');
-//   }
-// });
+  if(scrolled === totalScroll){
+    window.alert('Thanks for checking out my work!');
+  }
+});
 
 // Select
+// Question //
+// ****** Other ways to use this? ***** //
+function logSelection(event) {
+  const log = document.getElementById('log');
+  const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+  log.textContent = `You selected: ${selection}`;
+}
+
+const input = document.querySelector('textarea');
+input.addEventListener('select', logSelection);
 
 
 // Dblclick
