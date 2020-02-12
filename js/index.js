@@ -94,16 +94,25 @@ window.addEventListener('resize', () => {
 // Scroll
 // QUESTION //
 //******* Need some explaination on total scroll calculation *****//
-window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY; 
-  const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+// window.addEventListener('scroll', () => {
+//   const scrolled = window.scrollY; 
+//   const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
 
-  if(scrolled === totalScroll){
-    window.alert('Thanks for checking out my work!');
-  }
-});
+//   if(scrolled === totalScroll){
+//     window.alert('Thanks for checking out my work!');
+//   }
+// });
 
 // Select
 
 
 // Dblclick
+const rightMiddleImg = document.querySelector('.img-content img');
+rightMiddleImg.addEventListener('dblclick', () => {
+  rightMiddleImg.src = 'https://images.unsplash.com/photo-1519500099198-fd81846b8f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
+});
+
+const leftMiddleImg = document.querySelector('.img-fluid');
+leftMiddleImg.addEventListener('dblclick', () => {
+  leftMiddleImg.src = 'https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80'
+});

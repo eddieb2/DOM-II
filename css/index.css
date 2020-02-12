@@ -350,3 +350,26 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.home .storyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0% 25%;
+  margin-bottom: 5%;
+}
+.home .storyContainer textarea {
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 2px solid #17A2B8;
+  box-shadow: 2px 2px 2px #999;
+}
+.home .storyContainer .labelContainer {
+  text-align: center;
+  margin-bottom: 2%;
+}
+.home .storyContainer .labelContainer label {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2rem;
+  text-decoration: underline;
+}
