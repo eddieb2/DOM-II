@@ -81,7 +81,29 @@ document.querySelectorAll('.nav-link').forEach(el => {
 // });
 
 // Resize
+const newImg = document.querySelector('.intro img');
+window.addEventListener('resize', () => {
+  if(window.screenX > 1000){
+    newImg.src = 'https://images.unsplash.com/photo-1525962898597-a4ae6402826e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
+  } else {
+    newImg.src = 'img/fun-bus.jpg'
+  }
+});
+
 
 // Scroll
+// QUESTION //
+//******* Need some explaination on total scroll calculation *****//
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY; 
+  const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+  if(scrolled === totalScroll){
+    window.alert('Thanks for checking out my work!');
+  }
+});
+
 // Select
+
+
 // Dblclick
